@@ -1,0 +1,11 @@
+---
+    # - import_playbook: ../../hostname.yml
+    - import_playbook: ../../security_profiles.yaml
+    - import_playbook: ../../fortilink_interfaces.yml
+    - import_playbook: ../../internet_outbound_policy.yaml
+    - import_playbook: pella_firewall_policies.yml
+    - import_playbook: ../../nextiva_phones.yaml
+    - import_playbook: ../../sip_alg.yml
+    - import_playbook: ../../FAP431G_wtp_profile.yml
+    - import_playbook: ../../wireless_networks.yml
+    

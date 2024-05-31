@@ -1,0 +1,11 @@
+[fortigates]
+ICT-PELLA-WICHITA-200F ansible_host=192.168.205.160 fortios_access_token=jd7psnxtf48bsh6nmzqsfk9NHw63Qb site_id=241
+ICT-PELLA-SALINA-60F ansible_host=192.168.205.156 fortios_access_token=0mg0spQQ3Qzqbwkkk3gyjQnkw7mfkN site_id=242
+ICT-PELLA-MANHATTAN-60F ansible_host=192.168.205.136 fortios_access_token=H9nffxg4tHNNynr7ndc903kmpdNnph site_id=243
+ICT-PELLA-LAWRENCE-60F ansible_host=192.168.205.197 fortios_access_token=01kz9c0qytyxHrsnqpNgHkdxmwf6cH site_id=244
+ICT-PELLA-HAYS-60F ansible_host=192.168.205.167 fortios_access_token=H77d6gyw1xthQG7Gmcd6Nyq7gp4Nby site_id=245
+ICT-PELLA-DODGE-CITY-60F ansible_host=192.168.205.184 fortios_access_token=kb5fH0n9gb4f59hys0qt0d835qmw3c site_id=246
+
+[fortigates:vars]
+ansible_network_os=fortinet.fortios.fortios
+customer=pella

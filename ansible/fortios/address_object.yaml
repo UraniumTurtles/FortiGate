@@ -1,0 +1,40 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+  tasks:
+    - name: addr_High Touch 0 
+      fortios_firewall_address:
+        state: "present"
+        access_token: "{{ fortios_access_token }}"
+        firewall_address:
+          name: "HighTouch0"
+          type: "ipmask"
+          subnet: "{{ hightouch0 }}"
+          allow_routing: "enable"
+        
+    - name: addr_RSSSHOII
+      fortios_firewall_address:
+        state: "present"
+        access_token: "{{ fortios_access_token }}"
+        firewall_address:
+          name: "RSSSHOII"
+          type: "ipmask"
+          subnet: "{{ RSSSHOII }}"
+          allow_routing: "enable"
+
+    - name: addr_ddc1-fw01
+      fortios_firewall_address:
+        state: "present"
+        access_token: "{{ fortios_access_token }}"
+        firewall_address:
+          name: "ddc1-fw01"
+          type: "ipmask"
+          subnet: "{{ ddc_ip }}"
+          allow_routing: "enable"
+      when: 
+        - ddc_hosted == "yes"

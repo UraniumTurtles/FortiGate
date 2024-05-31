@@ -1,0 +1,2 @@
+---
+  - import_playbook: noc_wipe_defaults.yaml

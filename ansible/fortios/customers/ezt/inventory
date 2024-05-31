@@ -1,0 +1,9 @@
+[fortigates]
+ezt001 ansible_host=172.16.154.65 fortios_access_token=d3ryk7cf4tQgGGb7tcG4dgNc76qQcQ store_num=001 model=fgt40 lan=172.16.154.65/26 lan_gw=172.16.154.65 startip=172.16.154.107 endip=172.16.154.126 wan=66.76.85.250/25 wan_gw=66.76.85.129 wifi=yes
+
+[fortigates:vars]
+ansible_network_os=fortinet.fortios.fortios
+customer=fht
+ddc_hosted=yes
+ddc_ip=172.28.1.208/29
+ddc_server=172.28.1.210

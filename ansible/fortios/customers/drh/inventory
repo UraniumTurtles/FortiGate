@@ -1,0 +1,14 @@
+[fortigates]
+drhho ansible_host=10.10.10.1 fortios_access_token=976mx98q4ctbmdwmh87HdfHQtbjkmt store_num=ho model=fgt40 lan=172.16.21.1/26 lan_gw=172.16.21.1 startip=172.16.21.43 endip=172.16.21.62 wan_dhcp=yes wifi=yes
+
+[fortigates:vars]
+ansible_network_os=fortinet.fortios.fortios
+customer=drh
+store_hosted=yes
+storeid=001
+storewan=24.173.177.174
+store_host_lan=172.16.255.1/26
+store_server=172.16.255.11
+ddc_hosted=no
+ddc_ip=172.18.0.68/30
+ddc_server=172.18.0.69

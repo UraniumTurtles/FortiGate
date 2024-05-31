@@ -1,0 +1,5 @@
+---
+#- import_playbook: antivirus_profile.yaml
+- import_playbook: application_profile.yaml
+- import_playbook: ips_sensor.yaml
+- import_playbook: webfilter_profile.yaml

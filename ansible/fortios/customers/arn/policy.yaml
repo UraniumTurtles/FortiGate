@@ -1,0 +1,41 @@
+- hosts: fortigates  
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+    vdom: "root"
+    ansible_httpapi_use_ssl: yes
+    ansible_httpapi_validate_certs: no
+    ansible_httpapi_port: 10443
+  tasks:
+    - name: Granite allow
+      fortios_firewall_policy:
+        vdom: "{{ vdom }}"
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "50"
+          name: "Granite-VoIP-Allow"
+          srcintf:
+          - name: "lan"
+          dstintf:
+          - name: "virtual-wan-link"
+          srcaddr:
+          - name: "internal"
+          dstaddr:
+          - name: "Granite-VOIP-Allow-List"
+          action: "accept"
+          schedule: "always"
+          service:
+          - name: "ALL"
+          nat: "enable" 
+
+    - name: Move policy 
+      fortinet.fortios.fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        action: "move"
+        self: "50"
+        before: "2"

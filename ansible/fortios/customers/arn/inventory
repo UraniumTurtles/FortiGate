@@ -1,0 +1,61 @@
+[fortigates]
+
+#arn002 ansible_host=172.16.200.193 fortios_access_token=47rby39b1H3phQtG8sdnfQhHs1hwz6
+#arn003 ansible_host=172.16.219.65 fortios_access_token=wzff1nxH7N38kf3qj07gqd4rgn9NQs
+#arn004 ansible_host=172.16.198.65 fortios_access_token=jd3tq3yGr396b8f6jrwxHxrqmp7qj5
+#arn005 ansible_host=172.16.106.1 fortios_access_token=qgztQH0dHq1dxQnk4p0pQhck8ddjjH
+#arn006 ansible_host=172.16.106.65 fortios_access_token=hbm6nfbzgGnfjj7k7nQqGm7skx7fq3
+#arn007 ansible_host=172.16.106.129 fortios_access_token=69y5jzsb9dgjhGh8wcy6Gzw7bdcyr3
+#arn008 ansible_host=172.16.219.129 fortios_access_token=tz5xmwc8gzHtmkhQwk4Qp90dwp0rGj
+arn009 ansible_host=172.17.122.129 fortios_access_token=9g9b7cwkj8yn1cHHy4NtbpQjc1Hdtw
+#arn010 ansible_host=172.16.106.193 fortios_access_token=11Qqbc8Hjwtxj8m9Nxr8t99s57h53G
+arn011 ansible_host=172.17.242.193 fortios_access_token=r7n6ns8qz3QzGqbx0c5NNxmwyw8mb5
+#arn012 ansible_host=172.16.112.1 fortios_access_token=44cwhgc31kss7zqggcj3kH07jNz9mr
+#arn013 ansible_host=172.16.200.65 fortios_access_token=wtg5yn1cNs0t6b16t45Hx310b0075c
+#arn014 ansible_host=172.16.200.129 fortios_access_token=b0yGyh65mbmdwjcx151pyNp0sr8Q3w
+#arn015 ansible_host=172.16.182.129 fortios_access_token=3jmqd97mNcQ0cnkcHfm7srn1wdfczQ
+arn017 ansible_host=172.17.126.1 fortios_access_token=wHQ08QwymfQwsddynp5Gqgb7xrfdhg
+#arn018 ansible_host=172.16.216.129 fortios_access_token=wtrkck5163rs0pqrj9g3G81bkjgGG0
+#arn019 ansible_host=172.16.102.129 fortios_access_token=0r1pwm71qjQty3bxr6m1nhjd3g9Qgb
+arn020 ansible_host=172.17.242.129 fortios_access_token=5crzph40ymrs3rqy86dsqrp104Q7k5
+#arn021 ansible_host=172.16.18.193 fortios_access_token=pHQszyHt0GjG4fkh4xN1s84053tfs7
+#arn023 ansible_host=172.16.29.129 fortios_access_token=hjrGGgy9xsj0Q9g64k6sdqj5t5cqw3
+#arn024 ansible_host=172.16.103.1 fortios_access_token=3d77zNn107Njnprtm3QxQphpszrxjs
+#arn025 ansible_host=172.16.103.129 fortios_access_token=qw6jH10fhNg3k6qzx8wfGd7x49Ngzb
+#arn026 ansible_host=172.16.29.193 fortios_access_token=mzH19hj9N3bbdg991zNGmQ4r56q637
+#arn027 ansible_host=172.16.29.1 fortios_access_token=dht95t44z5Ns9qfmgjbgw3Hy3ph8Q6
+#arn028 ansible_host=172.16.15.1 fortios_access_token=8fxqbyzjxd7GHsGdG50j9jqhh456Q7
+#arn029 ansible_host=172.16.37.65 fortios_access_token=q7Hcs3wqrr797rn4f18Q14sQ8m0Qbc
+#arn030 ansible_host=172.16.37.129 fortios_access_token=N1NcHxgGNtwxxpx9pspfn18hHdnc1b
+#arn031 ansible_host=172.16.254.129 fortios_access_token=GrfqqG6zpd96wzN14dgG67gfmHk58Q
+#arn032 ansible_host=172.16.61.65 fortios_access_token=cGx45n0pfqyp8Nkxwm7xhnr5z6Nbd5
+#arn033 ansible_host=172.16.233.65 fortios_access_token=p1G85bstxk5t3Q0jd4kNdcg7k079Qr
+#arn034 ansible_host=172.16.36.129 fortios_access_token=HgN7mt3dNyNjhs0gkcGq4c4t3p9rjd
+arn035 ansible_host=172.17.242.1 fortios_access_token=ht7qdwzs9G8xt4wbN6HzkhcQqsNsk7
+arn036 ansible_host=172.16.122.193 fortios_access_token=fsNt15n3Gzsf7jfc1qx9m5dz5qbghw
+arn037 ansible_host=172.16.50.65 fortios_access_token=jw0th9w66rw7Ng8jbsz71sgsckxxzw
+#arn039 ansible_host=172.16.218.1 fortios_access_token=x5b360p30zjtG0bmhHcdxdN1mNwfk9
+#arn043 ansible_host=172.16.254.193 fortios_access_token=pz6hytqdrn0473c191z8ny849GskN0
+#arn044 ansible_host=172.16.36.1 fortios_access_token=jtq0jcj8pG5txwq9NgqG3cs9pQ4thf
+#arn045 ansible_host=172.16.36.65 fortios_access_token=4hG1n5zzqjdNhyHkq9jfd5HHbQrns4
+arn047 ansible_host=172.17.126.65 fortios_access_token=Hdhr507spc66N7r99Q9G8x7jt677Gs
+#arn049 ansible_host=172.16.37.193 fortios_access_token=yqGxqnjpdwt9gNt1t3tg03749f7qnr
+#arn050 ansible_host=172.16.253.1 fortios_access_token=64z9khHmcq1G9dqk1Qk6zfN0zHwcr6
+#arn051 ansible_host=172.16.253.193 fortios_access_token=cfwj8Hj4xwtHn4577w7Ggb460jxG80
+arn052 ansible_host=172.16.61.129 fortios_access_token=4jm76gk6jjG7tQrpss3rjszqm7q9jr
+#arn053 ansible_host=172.16.61.193 fortios_access_token=GGs4rf1rdNqQmdptjNfyctNcgQnGhH
+#arn054 ansible_host=172.16.63.193 fortios_access_token=zd985dcymfzsmwhNfb4sqfqqpp3cch
+arn055 ansible_host=172.16.94.1 fortios_access_token=zd985dcymfzsmwhNfb4sqfqqpp3cch
+#arn056 ansible_host=172.16.96.1 fortios_access_token=51Qm7Gjpz4sNm99xjcj08j7Hjg4w71
+arn057 ansible_host=172.17.219.129 fortios_access_token=18Np3wNzbc4Q7gsGpxHkjG0ybwrjQ4
+arn058 ansible_host=172.17.221.1 fortios_access_token=0jb4Hnd3skHn3zQGfGmjq358pbhqx1
+arn059 ansible_host=172.17.221.129 fortios_access_token=wwxjHsy7yy3b9H0yhtm11dfr8NktQg
+arn060 ansible_host=172.17.219.193 fortios_access_token=wjmg5r4r71dm8HQy8h14653NG3t8rh
+arn061 ansible_host=172.17.220.129 fortios_access_token=wjdw96N7mxb8nNQbg4mqH46Gm7kzzd
+arn062 ansible_host=172.17.221.65 fortios_access_token=jsdg7dQbp173Gmj7j5rtzGnbGngnsq
+arn063 ansible_host=172.17.126.193 fortios_access_token=m841Hprh1s896y7nrdjrft4tr4q0gd
+#arn9032 ansible_host=172.16.62.193 fortios_access_token=t5fk5p1nrsszfjHcp6Htssdzq90g6h
+arn999 ansible_host=172.17.219.1 fortios_access_token=Gk30x6zkmkmhjQhHHbpx4k45ztxpQn
+
+[fortigates:vars]
+ansible_network_os=fortinet.fortios.fortios

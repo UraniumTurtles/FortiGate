@@ -1,6 +1,0 @@
-[fortigates]
-KC_Shawnee ansible_host=173.198.146.98 fortios_access_token=6xg4N916rdQbh8631rbGH0dnkjhzz4
-DFW_GulfGW ansible_host=12.221.38.90 fortios_access_token=jrb7tH9Gx7Qx6q0yhHfrzmf0b7Nchh
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios

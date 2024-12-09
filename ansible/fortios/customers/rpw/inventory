@@ -1,6 +1,0 @@
-[fortigates]
-#rpw2701 ansible_host=10.10.10.2 fortios_access_token=7zN580Njsp91ykQ7dGb3y48sH0G0rh store_num=2701 model=fgt40 lan=172.16.149.65/26 lan_gw=172.16.149.65 startip=172.16.149.107 endip=172.16.149.126 wan=96.10.113.150/30 wan_gw=96.10.113.149 wifi=yes wan_dhcp=no customer=rpw ddc_hosted=yes ddc_ip=172.28.1.248/29 ddc_server=172.28.1.250
-rit001 ansible_host=10.10.10.3 fortios_access_token=p30j3pr1Gt6N6N79G61bsNd73pptG7 store_num=001 model=fgt40 lan=172.17.0.1/26 lan_gw=172.17.0.1 startip=172.17.0.43 endip=172.17.0.62 wan=90.0.0.0 wan_gw=0.0.0.0 wifi=no wan_dhcp=no customer=rit ddc_hosted=yes ddc_ip=172.28.1.64/29 ddc_server=172.28.1.66
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios

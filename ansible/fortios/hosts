@@ -1,9 +1,0 @@
-[fortigates]
-
-; FGT-VM64 ansible_host=10.0.180.14 fortios_access_token=H35913z1jdtmH108j1cGfp1nwpy93w
-; ICT-HUNTER-601F ansible_host=192.168.1.99 fortios_access_token=y48hnkNfz6dQwmwGz8wyxkgHmrj3H5
-; CC-Crast ansible_host=67.79.103.14 fortios_access_token=8z3wj93pGnkcz43m15syyH8nN4Hrfx
-; ICT-Rotary-Club-60F ansible_host=192.168.1.1 fortios_access_token=jGG0pGddgzNj9xtrczz6k63777r01k
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios

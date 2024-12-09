@@ -1,7 +1,0 @@
-[fortigates]
-fht001 ansible_host=10.10.10.3 fortios_access_token=p3gH4G0Q1pcc3x93pqbh1w4Ncbfj9G store_num=ho model=fgt40 lan=172.16.180.129/26 lan_gw=172.16.180.129 startip=172.16.180.171 endip=172.16.180.190 wan=66.76.85.250/25 wan_gw=66.76.85.129 wifi=yes
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios
-customer=fht
-ddc_hosted=no

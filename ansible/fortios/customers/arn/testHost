@@ -1,6 +1,0 @@
-[fortigates]
-
-arn009 ansible_host=172.17.122.129 ansible_user="admin" ansible_password="[arnG@te20]" #fortios_access_token=9g9b7cwkj8yn1cHHy4NtbpQjc1Hdtw
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios

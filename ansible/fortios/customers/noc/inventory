@@ -1,6 +1,0 @@
-[fortigates]
-noc_lab ansible_host=10.10.10.1 fortios_access_token=G40dskrNmzGQmrtsyw5cw6bQqg8rtm
-
-[fortigates:vars]
-ansible_network_os=fortinet.fortios.fortios
-customer=noc

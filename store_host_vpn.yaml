@@ -1,0 +1,57 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+  tasks:
+    - name: StoreHosted VPNp1 Main
+      fortios_vpn_ipsec_phase1_interface:
+        state: "present"
+        access_token: "{{ fortios_access_token }}"
+        vpn_ipsec_phase1_interface:
+          name: "{{ customer }}{{ storeid }}-rto_1"
+          type: "static"
+          remote_gw: "{{ storewan }}"
+          interface: "wan"
+          keylife: "28800"
+          mode: "aggressive"
+          peertype: "one"
+          net_device: "disable"
+          proposal: "aes256-sha1"
+          localid: "{{ customer }}{{ store_num }}-rto"
+          dpd: "on-idle"
+          dhgrp: "2"
+          peerid: "{{ customer }}{{ storeid }}-rto"
+          psksecret: "hi23tou78ch09inc"
+          dpd_retryinterval: "60"
+      when: 
+        - model == "fgt40"
+
+    - name: StoreHosted VPNp1 backup
+      fortios_vpn_ipsec_phase1_interface:
+        state: "present"
+        access_token: "{{ fortios_access_token }}"
+        vpn_ipsec_phase1_interface:
+          name: "{{ customer }}{{ storeid }}-rto_2"
+          type: "static"
+          remote_gw: "{{ storewan }}"
+          interface: "a"
+          keylife: "28800"
+          mode: "aggressive"
+          peertype: "one"
+          net_device: "disable"
+          proposal: "aes256-sha1"
+          localid: "{{ customer }}{{ store_num }}-rto"
+          dpd: "on-idle"
+          dhgrp: "2"
+          peerid: "{{ customer }}{{ storeid }}-rto"
+          psksecret: "hi23tou78ch09inc"
+          dpd_retryinterval: "60"
+          monitor: "{{ customer }}{{storeid}}-rto_1"
+          monitor_hold_down_type: "delay"
+          monitor_hold_down_delay: "15"
+      when: 
+        - model == "fgt40"

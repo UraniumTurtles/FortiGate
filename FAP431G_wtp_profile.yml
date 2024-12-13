@@ -1,0 +1,101 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+  tasks:
+    - name: Configure the default wtp-profile for FAP431G access points
+      fortios_wireless_controller_wtp_profile:
+        vdom: "{{ vdom }}"
+        state: present
+        access_token: "{{ fortios_access_token }}"
+        wireless_controller_wtp_profile:
+          name: "FAP431G-custom"
+          platform: 
+            type: "431G"
+          handoff_sta_thresh: 55
+          radio_1:
+            arrp_profile: "arrp-default"     
+            auto_power_level: "enable"
+            band: "802.11ax,n,g-only"
+            # channel: 
+            #   - chan: 1
+            #   - chan: 6
+            #   - chan: 11
+            darrp: "enable"
+            wids_profile: "default"
+          radio_2:
+            arrp_profile: "arrp-default"
+            auto_power_level: "enable"
+            band: "802.11ax-5G"
+            # channel: 
+            #   - chan: 36
+            #   - chan: 44
+            #   - chan: 149
+            #   - chan: 157
+            channel_bonding: "40MHz"
+            darrp: "enable"
+            wids_profile: "default"
+          radio_3:
+            arrp_profile: "arrp-default"
+            auto_power_level: "enable"
+            band: "802.11ax-6G"
+            # channel: 
+            #   - chan: 1
+            #   - chan: 5
+            #   - chan: 9
+            #   - chan: 13
+            #   - chan: 17
+            #   - chan: 21
+            #   - chan: 25
+            #   - chan: 29
+            #   - chan: 33
+            #   - chan: 37
+            #   - chan: 41
+            #   - chan: 45
+            #   - chan: 49
+            #   - chan: 53
+            #   - chan: 57
+            #   - chan: 61
+            #   - chan: 65
+            #   - chan: 69
+            #   - chan: 73
+            #   - chan: 77
+            #   - chan: 81
+            #   - chan: 85
+            #   - chan: 89
+            #   - chan: 93
+            #   - chan: 97
+            #   - chan: 101
+            #   - chan: 105
+            #   - chan: 109
+            #   - chan: 113
+            #   - chan: 117
+            #   - chan: 121
+            #   - chan: 125
+            #   - chan: 129
+            #   - chan: 133
+            #   - chan: 137
+            #   - chan: 141
+            #   - chan: 145
+            #   - chan: 149
+            #   - chan: 153
+            #   - chan: 157
+            #   - chan: 161
+            #   - chan: 165
+            #   - chan: 169
+            #   - chan: 173
+            #   - chan: 193
+            #   - chan: 197
+            #   - chan: 201
+            #   - chan: 205
+            #   - chan: 209
+            #   - chan: 213
+            #   - chan: 217
+            #   - chan: 221
+            channel_bonding: "80MHz"
+            darrp: "enable"
+            wids_profile: "default"

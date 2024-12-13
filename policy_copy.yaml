@@ -1,0 +1,61 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+  tasks:
+    - name: High Touch Local
+      fortios_firewall_policy:
+        vdom: "{{ vdom }}"
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_High Touch 0_local"
+          srcintf:
+          -
+            name: "internal"
+          dstintf:
+          -
+            name: "virtual-wan-link"
+          srcaddr:
+          -
+            name: "High Touch 0_local"
+          dstaddr:
+          -
+            name: "High Touch 0_remote"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+
+    - name: High touch remote
+      fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_High Touch 0_remote"
+          srcintf:
+          -
+            name: "virtual-wan-link"
+          dstintf:
+          -
+            name: "internal"
+          srcaddr:
+          -
+            name: "High Touch 0_remote"
+          dstaddr:
+          -
+              name: "High Touch 0_local"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+              name: "ALL"
+          nat: "disable"

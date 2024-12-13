@@ -1,0 +1,197 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  vars:
+  tasks:
+    - name: High Touch Local
+      fortios_firewall_policy:
+        vdom: "{{ vdom }}"
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_High Touch 0_local"
+          srcintf:
+          -
+            name: "internal"
+          dstintf:
+          -
+            name: "virtual-wan-link"
+          srcaddr:
+          -
+            name: "High Touch 0_local"
+          dstaddr:
+          -
+            name: "High Touch 0_remote"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+
+    - name: High touch remote
+      fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_High Touch 0_remote"
+          srcintf:
+          -
+            name: "virtual-wan-link"
+          dstintf:
+          -
+            name: "internal"
+          srcaddr:
+          -
+            name: "High Touch 0_remote"
+          dstaddr:
+          -
+            name: "High Touch 0_local"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+
+
+    - name: RSSSHOII Local
+      fortios_firewall_policy:
+        vdom: "{{ vdom }}"
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_RSSS HO II_local"
+          srcintf:
+          -
+            name: "internal"
+          dstintf:
+          -
+            name: "virtual-wan-link"
+          srcaddr:
+          -
+            name: "RSSS HO II_local"
+          dstaddr:
+          -
+            name: "RSSS HO II_remote"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+
+    - name: RSSSHOII remote
+      fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_RSSS HO II_remote"
+          srcintf:
+          -
+            name: "virtual-wan-link"
+          dstintf:
+          -
+            name: "internal"
+          srcaddr:
+          -
+            name: "RSSS HO II_remote"
+          dstaddr:
+          -
+            name: "RSSS HO II_local"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+
+    - name: ddc Local
+      fortios_firewall_policy:
+        vdom: "{{ vdom }}"
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_ddc1-fw01_local"
+          srcintf:
+          -
+            name: "internal"
+          dstintf:
+          -
+            name: "virtual-wan-link"
+          srcaddr:
+          -
+            name: "ddc1-fw01_local"
+          dstaddr:
+          -
+            name: "ddc1-fw01_remote"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+      when: 
+        - ddc_hosted == "yes"
+
+    - name: ddc remote
+      fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "vpn_ddc1-fw01_remote"
+          srcintf:
+          -
+            name: "virtual-wan-link"
+          dstintf:
+          -
+            name: "internal"
+          srcaddr:
+          -
+            name: "ddc1-fw01_remote"
+          dstaddr:
+          -
+            name: "ddc1-fw01_local"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"
+          nat: "disable"
+      when:
+        - ddc_hosted == "yes"
+
+    - name: Internet
+      fortios_firewall_policy:
+        access_token: "{{ fortios_access_token }}"
+        state: "present"
+        firewall_policy:
+          policyid: "0"
+          name: "Internet_Egress"
+          srcintf:
+          -
+            name: "internal"
+          dstintf:
+          -
+            name: "virtual-wan-link"
+          srcaddr:
+          -
+            name: "internal"
+          dstaddr:
+          -
+            name: "all"
+          action: "accept"
+          schedule: "always"
+          service:
+          -
+            name: "ALL"

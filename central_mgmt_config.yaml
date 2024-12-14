@@ -1,4 +1,4 @@
-- hosts: fortigates
+- hosts: prod
   collections:
     - fortinet.fortios
   connection: httpapi
